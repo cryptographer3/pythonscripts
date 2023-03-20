@@ -1,0 +1,43 @@
+Instructions to make hybrid images using the hybridimage.py script - 
+
+"FIRST OF ALL MAKE SURE ALL THE THREE REQUIRED SCRIPTS AND IMAGE FILES ARE IN THE SAME DIRECTORY"
+"MAKE SURE YOU HAVE OPENCV, MATPLOTLIB AND NUMPY LIBRARIES INSTALLED ON YOUR SYSTEM"
+
+-> You do not need the idealpassfilter.py file to make hybrid images, it is just there as an added bonus.
+
+-> When you run the hybridimage.py script, it will ask you for a few inputs such as the filename/address of both the images, cutoff frequencies and filter orders for both the images. Make sure you choose a right combination of these parameters and read the input instructions carefully.
+
+-> Two pairs of sample images have been provided for your own testing purposes. Enter the following parameters to get the best results from them- 
+
+Set 1 - 
+
+Image 1 - KEKW.jpg
+Image 2 - KEKWait.jpg
+Cutoff frequency for low pass filter - 5
+Order (filter order) for low pass filter - 1
+Cutoff frequency for high pass filter - 15
+Order (filter order) for high pass filter - 1
+
+Set 2 - 
+
+Image 1 - norris1.jpg
+Image 2 - norris2.jpg
+Cutoff frequency for low pass filter - 5
+Order (filter order) for low pass filter - 1
+Cutoff frequency for high pass filter - 50
+Order (filter order) for high pass filter - 1
+
+How this script works - 
+
+-> It takes the first image and fourier transforms it into frequency domain. Then it passes that image through the low pass filter to discard all the higher frequencies. 
+Passing the image's fourier transform through the low pass filter smoothens the image.
+
+-> It takes the second image and fourier transforms it into frequency domain. Then it passes that image through the high pass filter to discard all the lower frequencies.
+Passing the image's fourier transform through the high pass filter sharpens the image.
+
+-> The resultant transforms are added together and are fourier transformed back into the spatial domain to get the resultant hybrid image.
+
+More info on - https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_transforms/py_fourier_transform/py_fourier_transform.html
+
+
+P.S. - you only need hybridimage.py, lowpassfilter.py and highpassfilter.py for the program to work as intended. Feel free to use your own pairs of images and play around with the parameters to get the desired resultant hybrid image.
