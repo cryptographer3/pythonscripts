@@ -1,3 +1,5 @@
+Author - cryptographer3
+
 Instructions to make hybrid images using the hybridimage.py script - 
 
 "FIRST OF ALL MAKE SURE ALL THE THREE REQUIRED SCRIPTS AND IMAGE FILES ARE IN THE SAME DIRECTORY"
